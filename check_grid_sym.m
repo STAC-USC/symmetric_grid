@@ -31,7 +31,7 @@ issym=true;
 matI=reshape(1:NN,N,N);
 I_NN=eye(NN);
 
-% here we check each symmetry type that we need to check 
+% here we check each symmetry type
 % note that: although pentasymmetric grids satisfy all 5 symmetries, 
 % it suffices to assert pentasymmetry by showing this grid is both 
 % UD-symmetric and diagonally symmetric. Thus, the following would be 
