@@ -22,8 +22,8 @@ function issym=check_grid_sym(L,symtype)
 NN=size(L,1);
 N=sqrt(NN);
 L_offdiag = L(:); L_offdiag(1:NN+1:end)=0;
-if size(L,1)~=size(L,2) || round(N)~=N || any(L_offdiag>0)==1 ...
-        || any(diag(L))<0 || any(sum(L))<0 || ~issymmetric(L)
+if size(L,1)~=size(L,2) || round(N)~=N || any(L_offdiag>1e-4) ...
+        || any(diag(L)<-1e-4) || any(sum(L)<-1e-4) || ~issymmetric(L)
     error('L is not a valid Laplacian matrix for a grid');
 end
 
